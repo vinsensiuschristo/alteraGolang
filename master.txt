@@ -1,1 +1,3 @@
 ini adalah file Master.txt
+
+semua perubahan terbaru dari development diterapkan di master dan berhasil
