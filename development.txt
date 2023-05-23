@@ -1,1 +1,3 @@
 ini adalah file dari development.txt
+
+featureA dan featureB sudah ditambahkan dan berhasil di test di development.
