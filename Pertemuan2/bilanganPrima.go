@@ -3,19 +3,30 @@ package main
 import "fmt"
 
 func main() {
-	var numberFromUser uint32
+	isPrime := true
+	
+	fmt.Println("Program Menentukan Bilangan Prima")
 
-	fmt.Print("Masukan angka bilangan yang ingin dicek : ")
+	// Input angka
+	var num int
+	fmt.Print("Masukkan angka: ")
+	fmt.Scan(&num)
 
-	fmt.Scanln(&numberFromUser)
-
-	if numberFromUser > 65535{
-		fmt.Println("Angka Tidak Valid. Masukan dari 0 - 65535")
-	} else if numberFromUser == 2 {
-		fmt.Println("Bilangan yang Anda masukan adalah bilangan prima")
-	} else if numberFromUser % 2 == 1 {
-		fmt.Println("Bilangan yang Anda masukan adalah bilangan prima")
+	
+	if num < 2 {
+		isPrime = false
 	} else {
-		fmt.Println("Bilangan yang Anda masukan adalah bukan bilangan prima")
+		for i := 2; i*i <= num; i++ {
+			if num%i == 0 {
+				isPrime = false
+				break
+			}
+		}
+	}
+
+	if isPrime {
+		fmt.Println(num, "adalah bilangan prima")
+	} else {
+		fmt.Println(num, "bukan bilangan prima")
 	}
 }
